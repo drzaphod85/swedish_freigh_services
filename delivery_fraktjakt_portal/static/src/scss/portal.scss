@@ -1,0 +1,9 @@
+// Stilar för portalen och ombudsväljaren.
+#fraktjakt_agent_picker {
+    label.card {
+        cursor: pointer;
+        transition: border-color 0.15s ease;
+        &:hover { border-color: #875A7B; }
+    }
+    input[type="radio"]:checked + strong { color: #875A7B; }
+}

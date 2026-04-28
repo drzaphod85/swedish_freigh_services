@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <record id="product_product_nshift" model="product.product">
+        <field name="name">Shipping via nShift</field>
+        <field name="type">service</field>
+        <field name="categ_id" ref="product.cat_expense"/>
+        <field name="default_code">SHIP-NSHIFT</field>
+        <field name="invoice_policy">order</field>
+        <field name="list_price">0.0</field>
+        <field name="purchase_ok" eval="False"/>
+        <field name="sale_ok" eval="False"/>
+    </record>
+
+    <record id="delivery_carrier_nshift_default" model="delivery.carrier">
+        <field name="name">nShift Ship</field>
+        <field name="delivery_type">nshift</field>
+        <field name="product_id" ref="product_product_nshift"/>
+        <field name="active" eval="False"/>
+    </record>
+</odoo>

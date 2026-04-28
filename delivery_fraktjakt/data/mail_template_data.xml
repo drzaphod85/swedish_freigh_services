@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <record id="mail_template_fraktjakt_shipped"
+            model="mail.template">
+        <field name="name">Fraktjakt: Shipment dispatched</field>
+        <field name="model_id" ref="stock.model_stock_picking"/>
+        <field name="subject">Your shipment {{ object.name }} is on its way</field>
+        <field name="email_from">{{ (object.company_id.email or user.email) }}</field>
+        <field name="email_to">{{ object.partner_id.email }}</field>
+        <field name="lang">{{ object.partner_id.lang }}</field>
+        <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+    <p>Hi <t t-out="object.partner_id.name or ''"/>,</p>
+    <p>Your shipment <t t-out="object.name"/> has been dispatched.</p>
+    <p>Tracking number: <strong t-out="object.fraktjakt_tracking_number or '—'"/></p>
+    <p>
+        <a t-att-href="object.fraktjakt_tracking_link"
+           style="background-color: #875A7B; color: #fff; padding: 8px 16px;
+                  text-decoration: none; border-radius: 4px;">
+            Track parcel
+        </a>
+    </p>
+</div>
+        </field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+</odoo>

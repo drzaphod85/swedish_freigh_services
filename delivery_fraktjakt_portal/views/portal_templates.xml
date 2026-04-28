@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Add tracking block to the order detail page in the customer portal -->
+    <template id="portal_my_orders_fraktjakt"
+              name="Fraktjakt tracking on SO in portal"
+              inherit_id="sale.sale_order_portal_template">
+        <xpath expr="//div[hasclass('o_portal_html_view')]" position="before">
+            <t t-set="fj_pickings"
+               t-value="sale_order.picking_ids.filtered(
+                            lambda p: p.fraktjakt_shipment_id)"/>
+            <t t-if="fj_pickings">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5 class="mb-0">Shipments</h5>
+                    </div>
+                    <div class="card-body">
+                        <t t-foreach="fj_pickings" t-as="p">
+                            <div class="d-flex justify-content-between
+                                        align-items-center mb-2 pb-2
+                                        border-bottom">
+                                <div>
+                                    <strong t-out="p.name"/>
+                                    <span class="badge bg-secondary ms-2"
+                                          t-out="dict(p._fields['fraktjakt_state'].selection)
+                                                 .get(p.fraktjakt_state, p.fraktjakt_state)"/>
+                                    <div class="text-muted small">
+                                        <t t-out="p.fraktjakt_last_event or ''"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a t-att-href="p.fraktjakt_tracking_link"
+                                       target="_blank"
+                                       t-if="p.fraktjakt_tracking_link"
+                                       class="btn btn-sm btn-primary">
+                                        Track
+                                    </a>
+                                    <a t-att-href="'/my/fraktjakt/picking/' + str(p.id)"
+                                       class="btn btn-sm btn-outline-secondary">
+                                        Details
+                                    </a>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Detail page for a single shipment -->
+    <template id="portal_picking_detail" name="Fraktjakt shipment detail">
+        <t t-call="portal.portal_layout">
+            <t t-set="title">Shipment <t t-out="picking.name"/></t>
+            <div class="container py-4">
+                <h2>
+                    <t t-out="picking.name"/>
+                    <span class="badge bg-info ms-2"
+                          t-out="dict(picking._fields['fraktjakt_state'].selection)
+                                 .get(picking.fraktjakt_state, '')"/>
+                </h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>
+                            <strong>Tracking number:</strong>
+                            <t t-out="picking.fraktjakt_tracking_number or '—'"/>
+                        </p>
+                        <p t-if="picking.fraktjakt_tracking_link">
+                            <a t-att-href="picking.fraktjakt_tracking_link"
+                               target="_blank"
+                               class="btn btn-primary">
+                                Open full tracking
+                            </a>
+                        </p>
+                        <h4 class="mt-4">Events</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"
+                                t-foreach="picking.message_ids.filtered(
+                                            lambda m: 'Status' in (m.body or ''))[:20]"
+                                t-as="m">
+                                <small class="text-muted"
+                                       t-out="m.date and m.date.strftime('%Y-%m-%d %H:%M') or ''"/>
+                                <br/>
+                                <t t-out="m.body" t-options="{'widget': 'html'}"/>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Addressed to</h5>
+                                <address>
+                                    <t t-out="picking.partner_id.display_name"/><br/>
+                                    <t t-out="picking.partner_id.street or ''"/><br/>
+                                    <t t-out="picking.partner_id.zip or ''"/>
+                                    <t t-out="picking.partner_id.city or ''"/>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-secondary"
+                            id="fj_refresh_btn"
+                            t-att-data-picking-id="picking.id">
+                        Refresh tracking
+                    </button>
+                </div>
+            </div>
+            <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function() {
+                    var btn = document.getElementById('fj_refresh_btn');
+                    if (!btn) return;
+                    btn.addEventListener('click', function() {
+                        var pid = btn.dataset.pickingId;
+                        fetch('/my/fraktjakt/refresh/' + pid, {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({jsonrpc: '2.0', method: 'call', params: {}})
+                        }).then(function(r) { return r.json(); })
+                          .then(function() { window.location.reload(); });
+                    });
+                });
+            </script>
+        </t>
+    </template>
+</odoo>

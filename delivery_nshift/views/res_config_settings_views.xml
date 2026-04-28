@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_nshift" model="ir.ui.view">
+        <field name="name">res.config.settings.form.nshift</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="delivery.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='shipping_providers']" position="after">
+                <h2>nShift Ship</h2>
+                <div class="row mt16 o_settings_container" id="nshift_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Connection</span>
+                            <div class="text-muted">
+                                Fetch credentials from nShift Online → API settings.
+                            </div>
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="nshift_developer_id" class="col-lg-4 o_light_label"/>
+                                    <field name="nshift_developer_id"/>
+                                </div>
+                                <div class="row">
+                                    <label for="nshift_developer_key" class="col-lg-4 o_light_label"/>
+                                    <field name="nshift_developer_key" password="True"/>
+                                </div>
+                                <div class="row">
+                                    <label for="nshift_customer_no" class="col-lg-4 o_light_label"/>
+                                    <field name="nshift_customer_no"/>
+                                </div>
+                                <div class="row">
+                                    <label for="nshift_mode" class="col-lg-4 o_light_label"/>
+                                    <field name="nshift_mode"/>
+                                </div>
+                                <div class="row">
+                                    <label for="nshift_default_service" class="col-lg-4 o_light_label"/>
+                                    <field name="nshift_default_service"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

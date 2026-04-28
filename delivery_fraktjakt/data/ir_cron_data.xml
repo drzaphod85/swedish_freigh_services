@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <!-- Backup cron polling Track & Trace for ongoing shipments
+         in case the webhook misses something. Disabled by default. -->
+    <record id="ir_cron_fraktjakt_poll" model="ir.cron">
+        <field name="name">Fraktjakt: poll tracking (fallback)</field>
+        <field name="model_id" ref="model_stock_picking"/>
+        <field name="state">code</field>
+        <field name="code">model._fraktjakt_cron_poll_tracking()</field>
+        <field name="interval_number">2</field>
+        <field name="interval_type">hours</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <!-- Daily cleanup of log rows older than 90 days.
+         Now handles the shared shipping.api.log. -->
+    <record id="ir_cron_shipping_cleanup_log" model="ir.cron">
+        <field name="name">Shipping: clean log older than 90 days</field>
+        <field name="model_id" ref="delivery_shipping_base.model_shipping_api_log"/>
+        <field name="state">code</field>
+        <field name="code">model._shipping_cleanup_old()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

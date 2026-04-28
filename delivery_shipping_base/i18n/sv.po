@@ -1,0 +1,292 @@
+# Swedish translation for delivery_shipping_base
+# This file is distributed under the same license as the module.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 00:00+0000\n"
+"PO-Revision-Date: 2026-04-28 00:00+0000\n"
+"Last-Translator: Familjen Larsson\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_shipping_base
+#: model:ir.model,name:delivery_shipping_base.model_shipping_api_log
+msgid "Shipping integration API log"
+msgstr "Fraktintegrations-logg"
+
+#. module: delivery_shipping_base
+#: model:ir.actions.act_window,name:delivery_shipping_base.action_shipping_api_log
+#: model:ir.ui.menu,name:delivery_shipping_base.menu_shipping_api_log
+msgid "Shipping API Log"
+msgstr "API-logg för fraktintegrationer"
+
+#. module: delivery_shipping_base
+#: model:ir.ui.menu,name:delivery_shipping_base.menu_shipping_root
+msgid "Shipping Integrations"
+msgstr "Fraktintegrationer"
+
+#. module: delivery_shipping_base
+#: model:ir.ui.menu,name:delivery_shipping_base.menu_shipping_api_log
+msgid "API Log"
+msgstr "Anropslogg"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_shipping_api_log__integration
+msgid "Integration"
+msgstr "Integration"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,help:delivery_shipping_base.field_shipping_api_log__integration
+msgid "e.g. 'fraktjakt', 'nshift', 'sendify'."
+msgstr "t.ex. 'fraktjakt', 'nshift', 'sendify'."
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_shipping_api_log__endpoint
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_shipping_api_log__http_status
+msgid "HTTP"
+msgstr "HTTP"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_shipping_api_log__request_body
+msgid "Request"
+msgstr "Förfrågan"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_shipping_api_log__response_body
+msgid "Response"
+msgstr "Svar"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_shipping_api_log__error
+msgid "Error"
+msgstr "Fel"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_shipping_api_log__picking_id
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_stock_picking__shipping_state
+msgid "Transfer"
+msgstr "Leverans"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__shipping_taric
+msgid "TARIC / HS Code"
+msgstr "TARIC / HS-kod"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,help:delivery_shipping_base.field_product_template__shipping_taric
+msgid ""
+"Customs code per the EU nomenclature. Required for international shipments."
+msgstr ""
+"Tullnummer enligt EU:s nomenklatur. Krävs för internationella sändningar."
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__shipping_country_of_origin_id
+msgid "Country of Origin"
+msgstr "Ursprungsland"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,help:delivery_shipping_base.field_product_template__shipping_country_of_origin_id
+msgid ""
+"ISO 3166-1 alpha-2 code sent to the carrier for customs declaration."
+msgstr ""
+"ISO 3166-1 alpha-2-kod skickas till fraktbolaget för tulldeklaration."
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__product_length
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_product__product_length
+msgid "Length (cm)"
+msgstr "Längd (cm)"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,help:delivery_shipping_base.field_product_template__product_length
+msgid "Length in centimeters used by parcel calculation."
+msgstr "Längd i centimeter som används av paketberäkning."
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__product_width
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_product__product_width
+msgid "Width (cm)"
+msgstr "Bredd (cm)"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__product_height
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_product__product_height
+msgid "Height (cm)"
+msgstr "Höjd (cm)"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__shipping_dangerous_goods
+msgid "Dangerous Goods (LQ)"
+msgstr "Farligt gods (LQ)"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__shipping_dangerous_goods_un_nr
+msgid "UN Number"
+msgstr "UN-nummer"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_product_template__shipping_in_own_parcel
+msgid "Must Ship in Own Parcel"
+msgstr "Måste skickas i eget paket"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,help:delivery_shipping_base.field_product_template__shipping_in_own_parcel
+msgid ""
+"Prevents bin-packing algorithms from combining this product with other "
+"items."
+msgstr ""
+"Förhindrar bin-packing-algoritmer att slå ihop denna produkt med andra "
+"varor."
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_stock_picking__shipping_state
+msgid "Shipping Status"
+msgstr "Fraktstatus"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,help:delivery_shipping_base.field_stock_picking__shipping_state
+msgid ""
+"Overall status from the carrier regardless of which integration was used."
+msgstr ""
+"Övergripande status från fraktbolaget oavsett vilken integration som "
+"använts."
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_stock_picking__shipping_last_event
+msgid "Last Event"
+msgstr "Senaste händelse"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_stock_picking__shipping_last_event_at
+msgid "Event Time"
+msgstr "Tidpunkt"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,field_description:delivery_shipping_base.field_stock_picking__shipping_integration
+msgid "Shipping Integration"
+msgstr "Fraktintegration"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields,help:delivery_shipping_base.field_stock_picking__shipping_integration
+msgid ""
+"Which integration booked the shipment — e.g. fraktjakt, nshift, sendify."
+msgstr ""
+"Vilken integration som bokade frakten — t.ex. fraktjakt, nshift, sendify."
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__draft
+msgid "Not Booked"
+msgstr "Ej bokad"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__queried
+msgid "Quote Requested"
+msgstr "Pris förfrågat"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__ordered
+msgid "Booked"
+msgstr "Bokad"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__paid
+msgid "Paid"
+msgstr "Betald"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__in_transit
+msgid "In Transit"
+msgstr "Under transport"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__at_agent
+msgid "At Service Point"
+msgstr "Hos ombud"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__delivered
+msgid "Delivered"
+msgstr "Levererad"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__returned
+msgid "Returned"
+msgstr "Retur"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__cancelled
+msgid "Cancelled"
+msgstr "Avbokad"
+
+#. module: delivery_shipping_base
+#: model:ir.model.fields.selection,name:delivery_shipping_base.selection__stock_picking__shipping_state__error
+msgid "Error"
+msgstr "Fel"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_product_template_form_shipping
+msgid "Shipping & Customs"
+msgstr "Frakt & Tull"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_product_template_form_shipping
+msgid "Dimensions (cm)"
+msgstr "Mått (cm)"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_product_template_form_shipping
+msgid "Customs"
+msgstr "Tull"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_product_template_form_shipping
+msgid "Special Handling"
+msgstr "Specialhantering"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_shipping_api_log_search
+msgid "Errors only"
+msgstr "Endast fel"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_shipping_api_log_search
+msgid "Last hour"
+msgstr "Senaste timmen"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_shipping_api_log_search
+msgid "Group by"
+msgstr "Gruppera efter"
+
+#. module: delivery_shipping_base
+#: model_terms:ir.ui.view,arch_db:delivery_shipping_base.view_shipping_api_log_tree
+msgid "Shipping integration log"
+msgstr "Fraktintegrations-logg"
+
+#. module: delivery_shipping_base
+#. python-format
+#: code:addons/delivery_shipping_base/models/shipping_client.py:0
+msgid "Could not reach %s: %s"
+msgstr "Kunde inte nå %s: %s"
+
+#. module: delivery_shipping_base
+#. python-format
+#: code:addons/delivery_shipping_base/models/shipping_client.py:0
+msgid "HTTP %s: %s"
+msgstr "HTTP %s: %s"
+
+#. module: delivery_shipping_base
+#. python-format
+#: code:addons/delivery_shipping_base/models/shipping_client.py:0
+msgid "Expected JSON but received: %s"
+msgstr "Förväntade JSON men fick: %s"

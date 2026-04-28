@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Service point picker in website_sale checkout after delivery selection -->
+    <template id="checkout_agent_picker"
+              inherit_id="website_sale.delivery_form"
+              name="Fraktjakt service point picker at checkout">
+        <xpath expr="//div[@id='delivery_carrier']" position="after">
+            <div id="fraktjakt_agent_picker"
+                 class="mt-3"
+                 t-if="any(c.delivery_type == 'fraktjakt'
+                           for c in deliveries) if 'deliveries' in globals() else False">
+                <h4>Choose a pickup location</h4>
+                <div class="alert alert-light" role="alert">
+                    Pick up your parcel at the closest service point — we
+                    show the nearest ones based on your shipping address.
+                </div>
+                <div id="fj_agent_list" class="row"></div>
+                <input type="hidden" id="fj_selected_agent" name="fraktjakt_agent_id"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

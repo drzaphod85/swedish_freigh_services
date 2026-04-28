@@ -1,0 +1,14 @@
+// Stilar för Fraktjakt-relaterade widgetar i admin-gränssnittet.
+.o_fraktjakt_status_badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+
+    &.fj-state-ordered { background: #e3f2fd; color: #1565c0; }
+    &.fj-state-in_transit { background: #fff8e1; color: #f57c00; }
+    &.fj-state-at_agent { background: #f3e5f5; color: #6a1b9a; }
+    &.fj-state-delivered { background: #e8f5e9; color: #2e7d32; }
+    &.fj-state-cancelled { background: #ffebee; color: #c62828; }
+}

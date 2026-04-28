@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_fraktjakt_return_wizard" model="ir.ui.view">
+        <field name="name">fraktjakt.return.wizard.form</field>
+        <field name="model">fraktjakt.return.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create return">
+                <group>
+                    <field name="picking_id" readonly="1"/>
+                    <field name="reason"/>
+                    <field name="note"/>
+                </group>
+                <footer>
+                    <button name="action_create_return" type="object"
+                            string="Create return" class="btn-primary"/>
+                    <button special="cancel" string="Cancel"
+                            class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,656 @@
+# Swedish translation for delivery_fraktjakt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 00:00+0000\n"
+"PO-Revision-Date: 2026-04-28 00:00+0000\n"
+"Last-Translator: Familjen Larsson\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_consignor_id
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_config_settings__fraktjakt_consignor_id
+msgid "Fraktjakt Consignor ID"
+msgstr "Fraktjakt Consignor ID"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_res_company__fraktjakt_consignor_id
+msgid "Retrieved from Fraktjakt's integration settings."
+msgstr "Hämtas från Fraktjakts integrationsinställningar."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_consignor_key
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_config_settings__fraktjakt_consignor_key
+msgid "Fraktjakt Consignor Key"
+msgstr "Fraktjakt Consignor Key"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_res_company__fraktjakt_consignor_key
+msgid ""
+"Secret key — treat as a password. Retrieved from Fraktjakt's integration "
+"settings."
+msgstr ""
+"Hemlig nyckel — behandla som lösenord. Hämtas från Fraktjakts "
+"integrationsinställningar."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_test_mode
+msgid "Fraktjakt Test Mode"
+msgstr "Fraktjakt testläge"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_res_company__fraktjakt_test_mode
+msgid ""
+"When enabled, all calls are logged extra verbosely and a banner is shown "
+"on shipping bookings. The actual test mode is enabled in Fraktjakt's UI on "
+"the integration level."
+msgstr ""
+"När påslaget loggas alla anrop extra utförligt och en banner visas i "
+"fraktbokningar. Det faktiska test-läget aktiveras i Fraktjakts gränssnitt "
+"på integrationsnivå."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_callback_token
+msgid "Webhook Token"
+msgstr "Webhook-token"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_res_company__fraktjakt_callback_token
+msgid ""
+"Random string used as the secret in the webhook URL "
+"/fraktjakt/webhook/<token>. Paste the same value in Fraktjakt's callback "
+"URL."
+msgstr ""
+"Slumpmässig sträng som används som hemlighet i webhook-URL:en "
+"/fraktjakt/webhook/<token>. Klistra in samma värde i Fraktjakts "
+"callback-URL."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_default_export_reason
+msgid "Default Export Reason"
+msgstr "Standard exportorsak"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_eori
+msgid "EORI Number"
+msgstr "EORI-nummer"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_ioss
+msgid "IOSS Number"
+msgstr "IOSS-nummer"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_voec
+msgid "VOEC Number (Norway)"
+msgstr "VOEC-nummer (Norge)"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_gb_vat
+msgid "UK VAT Number"
+msgstr "UK VAT-nummer"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_res_company__fraktjakt_mva_num
+msgid "Norwegian MVA Number"
+msgstr "Norskt MVA-nummer"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_shipping_product_id
+msgid "Specific shipping_product_id"
+msgstr "Specifik shipping_product_id"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_delivery_carrier__fraktjakt_shipping_product_id
+msgid ""
+"Leave blank to let Fraktjakt show all available services. Set to e.g. 30 "
+"(PostNord MyPack Collect) to always use a specific service."
+msgstr ""
+"Lämna tomt för att låta Fraktjakt visa alla tillgängliga tjänster. Sätt "
+"till t.ex. 30 (PostNord MyPack Collect) om du alltid vill använda en "
+"specifik tjänst."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_no_agents
+msgid "Skip Service Point Suggestions"
+msgstr "Hoppa över ombudsförslag"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_delivery_carrier__fraktjakt_no_agents
+msgid ""
+"Faster response — but no info about closest service point shown to the "
+"customer."
+msgstr ""
+"Snabbare svar — men ingen info om närmsta ombud till kund."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_express
+msgid "Express Only"
+msgstr "Endast express"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_green
+msgid "Green-certified Only"
+msgstr "Endast miljöcertifierat"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_quality
+msgid "Quality-certified Only"
+msgstr "Endast kvalitetscertifierat"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_time_guarantee
+msgid "Time Guarantee Only"
+msgstr "Endast leveransgaranti"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_pickup
+msgid "Pickup at Sender Only"
+msgstr "Endast hämtning hos avsändare"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_dropoff
+msgid "Drop-off Only"
+msgstr "Endast inlämning"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_cold
+msgid "Refrigerated Transport"
+msgstr "Kyltransport"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_frozen
+msgid "Frozen Transport"
+msgstr "Frystransport"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_insure_default
+msgid "Additional Insurance"
+msgstr "Tilläggsförsäkring"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_delivery_carrier__fraktjakt_insure_default
+msgid ""
+"Automatically insure if value exceeds the carrier's basic insurance."
+msgstr ""
+"Försäkra automatiskt om värdet överstiger transportörens grundförsäkring."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_price_sort
+msgid "Sort Order"
+msgstr "Sortering"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__delivery_carrier__fraktjakt_price_sort__0
+msgid "Fastest delivery"
+msgstr "Snabbast leverans"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__delivery_carrier__fraktjakt_price_sort__1
+msgid "Lowest price"
+msgstr "Lägsta pris"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_delivery_carrier__fraktjakt_use_callback
+msgid "Enable Webhook"
+msgstr "Aktivera webhook"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_delivery_carrier__fraktjakt_use_callback
+msgid ""
+"Send callback_url with every call so Fraktjakt notifies us on status "
+"changes."
+msgstr ""
+"Skicka callback_url i alla anrop så Fraktjakt notifierar oss vid "
+"statusförändringar."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_shipment_id
+msgid "Fraktjakt shipment ID"
+msgstr "Fraktjakt shipment-ID"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_access_code
+msgid "Access code"
+msgstr "Access-code"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_access_link
+msgid "Manage at Fraktjakt"
+msgstr "Hantera hos Fraktjakt"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_tracking_code
+msgid "Tracking code"
+msgstr "Spårningskod"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_tracking_number
+msgid "Tracking number"
+msgstr "Spårningsnummer"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_tracking_link
+msgid "Tracking link"
+msgstr "Spårningslänk"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_amount
+msgid "Shipping cost"
+msgstr "Fraktkostnad"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_currency
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_return_link
+msgid "Create return"
+msgstr "Skapa retur"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_cancel_link
+msgid "Cancellation link"
+msgstr "Avbokningslänk"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_state
+msgid "Fraktjakt status"
+msgstr "Fraktjakt-status"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__draft
+msgid "Not Booked"
+msgstr "Ej bokad"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__queried
+msgid "Quote Requested"
+msgstr "Pris förfrågat"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__ordered
+msgid "Booked at Fraktjakt"
+msgstr "Bokad hos Fraktjakt"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__paid
+msgid "Paid (ready to ship)"
+msgstr "Betald (klar att skickas)"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__in_transit
+msgid "In Transit"
+msgstr "Under transport"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__at_agent
+msgid "At Service Point"
+msgstr "Hos ombud"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__delivered
+msgid "Delivered"
+msgstr "Levererad"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__returned
+msgid "Returned"
+msgstr "Retur"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__cancelled
+msgid "Cancelled"
+msgstr "Avbokad"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__stock_picking__fraktjakt_state__error
+msgid "Error"
+msgstr "Fel"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_stock_picking__fraktjakt_agent_id
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_sale_order__fraktjakt_agent_id
+msgid "Selected service point"
+msgstr "Valt ombud"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_stock_picking__fraktjakt_agent_id
+msgid ""
+"Fraktjakt agent_id if the customer selected a service point at checkout."
+msgstr ""
+"Fraktjakts agent_id om kunden valt ombud i kassan."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,help:delivery_fraktjakt.field_sale_order__fraktjakt_agent_id
+msgid "Fraktjakt agent_id selected by the customer at checkout."
+msgstr "Fraktjakt agent_id som kunden valde i kassan."
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_sale_order__fraktjakt_query_shipment_id
+msgid "Fraktjakt query shipment"
+msgstr "Fraktjakt query-shipment"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_sale_order__fraktjakt_query_product_id
+msgid "Selected shipping_product_id"
+msgstr "Vald shipping_product_id"
+
+#. module: delivery_fraktjakt
+#: model:ir.model,name:delivery_fraktjakt.model_fraktjakt_register_wizard
+msgid "Register Fraktjakt account"
+msgstr "Registrera Fraktjakt-konto"
+
+#. module: delivery_fraktjakt
+#: model:ir.actions.act_window,name:delivery_fraktjakt.action_fraktjakt_register
+msgid "Register Fraktjakt account"
+msgstr "Registrera Fraktjakt-konto"
+
+#. module: delivery_fraktjakt
+#: model:ir.ui.menu,name:delivery_fraktjakt.menu_fraktjakt_register
+msgid "Register new account"
+msgstr "Registrera nytt konto"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__fraktjakt_register_wizard__mode__import
+msgid "Paste existing credentials"
+msgstr "Klistra in befintliga credentials"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields.selection,name:delivery_fraktjakt.selection__fraktjakt_register_wizard__mode__register
+msgid "Register new account via Fraktjakt"
+msgstr "Registrera nytt konto via Fraktjakt"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__consignor_id
+msgid "Consignor ID"
+msgstr "Consignor ID"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__consignor_key
+msgid "Consignor Key"
+msgstr "Consignor Key"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__user_email
+msgid "Email"
+msgstr "E-post"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__user_password
+msgid "Password"
+msgstr "Lösenord"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__company_name
+msgid "Company name"
+msgstr "Företagsnamn"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__org_no
+msgid "Organization number"
+msgstr "Organisationsnummer"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__street
+msgid "Street address"
+msgstr "Adress"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__zip
+msgid "Postal code"
+msgstr "Postnummer"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__city
+msgid "City"
+msgstr "Ort"
+
+#. module: delivery_fraktjakt
+#: model:ir.model.fields,field_description:delivery_fraktjakt.field_fraktjakt_register_wizard__phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_delivery_carrier_form_fraktjakt
+msgid "Service selection"
+msgstr "Tjänsteval"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_delivery_carrier_form_fraktjakt
+msgid "Filters"
+msgstr "Filter"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_delivery_carrier_form_fraktjakt
+msgid "Test connection"
+msgstr "Testa anslutning"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_form_fraktjakt
+msgid "At Fraktjakt"
+msgstr "Hos Fraktjakt"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_form_fraktjakt
+msgid "Links"
+msgstr "Länkar"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_form_fraktjakt
+msgid "Last event"
+msgstr "Senaste händelse"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_form_fraktjakt
+msgid "Refresh tracking"
+msgstr "Uppdatera spårning"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_form_fraktjakt
+msgid "Open in Fraktjakt"
+msgstr "Öppna i Fraktjakt"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_search_fraktjakt
+msgid "Booked at Fraktjakt"
+msgstr "Fraktjakt-bokade"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_search_fraktjakt
+msgid "In transit"
+msgstr "Under transport"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_picking_search_fraktjakt
+msgid "At service point"
+msgstr "Hos ombud"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_fraktjakt_register_wizard
+msgid "Fraktjakt account"
+msgstr "Fraktjakt-konto"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_fraktjakt_register_wizard
+msgid "Import credentials"
+msgstr "Importera credentials"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_fraktjakt_register_wizard
+msgid "Save"
+msgstr "Spara"
+
+#. module: delivery_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt.view_fraktjakt_register_wizard
+msgid "Cancel"
+msgstr "Avbryt"
+
+#. module: delivery_fraktjakt
+#: model:ir.cron,name:delivery_fraktjakt.ir_cron_fraktjakt_poll
+msgid "Fraktjakt: poll tracking (fallback)"
+msgstr "Fraktjakt: poll spårning (fallback)"
+
+#. module: delivery_fraktjakt
+#: model:ir.cron,name:delivery_fraktjakt.ir_cron_shipping_cleanup_log
+msgid "Shipping: clean log older than 90 days"
+msgstr "Shipping: städa logg äldre än 90 dagar"
+
+#. module: delivery_fraktjakt
+#: model:mail.template,name:delivery_fraktjakt.mail_template_fraktjakt_shipped
+msgid "Fraktjakt: Shipment dispatched"
+msgstr "Fraktjakt: Försändelse skickad"
+
+#. module: delivery_fraktjakt
+#: model:product.product,name:delivery_fraktjakt.product_product_fraktjakt
+msgid "Shipping via Fraktjakt"
+msgstr "Frakt via Fraktjakt"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid ""
+"Fraktjakt credentials missing. Set Consignor ID and Key under Settings > "
+"Inventory > Fraktjakt."
+msgstr ""
+"Fraktjakt-credentials saknas. Sätt Consignor ID och Key under Inställningar"
+" > Lager > Fraktjakt."
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid "No shippable products on this order."
+msgstr "Inga fraktbara produkter på ordern."
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid "Fraktjakt returned no shipping options for this address."
+msgstr "Fraktjakt returnerade inga fraktalternativ för denna adress."
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid "Shipping label not yet available: %s"
+msgstr "Fraktsedel ännu inte tillgänglig: %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid ""
+"Fraktjakt booking created: <a href='%s' target='_blank'>shipment %s</a>. "
+"Tracking: %s"
+msgstr ""
+"Fraktjakt-bokning skapad: <a href='%s' target='_blank'>shipment %s</a>. "
+"Spårning: %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid "Cancellation at Fraktjakt failed. Cancel manually at %s"
+msgstr "Avbokning hos Fraktjakt misslyckades. Annullera manuellt på %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid "Fraktjakt booking cancelled."
+msgstr "Fraktjakt-bokning avbokad."
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid "Fraktjakt OK"
+msgstr "Fraktjakt OK"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/delivery_carrier.py:0
+msgid "Server status: %s"
+msgstr "Server-status: %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/stock_picking.py:0
+msgid "Status: %s — %s"
+msgstr "Status: %s — %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/stock_picking.py:0
+msgid "No Fraktjakt link available yet — book the shipment first."
+msgstr "Ingen Fraktjakt-länk finns ännu — boka frakten först."
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/stock_picking.py:0
+msgid "Fraktjakt poll failed: %s"
+msgstr "Fraktjakt poll misslyckades: %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/fraktjakt_request.py:0
+msgid "Could not reach Fraktjakt (%s): %s"
+msgstr "Kunde inte nå Fraktjakt (%s): %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/fraktjakt_request.py:0
+msgid "Could not parse Fraktjakt response: %s\n\n%s"
+msgstr "Kunde inte tolka Fraktjakt-svaret: %s\n\n%s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/models/fraktjakt_request.py:0
+msgid "Fraktjakt returned an error: %s"
+msgstr "Fraktjakt returnerade ett fel: %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/wizards/fraktjakt_register_wizard.py:0
+msgid "Fill in both ID and Key."
+msgstr "Fyll i både ID och Key."
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/wizards/fraktjakt_register_wizard.py:0
+msgid "Fraktjakt ready"
+msgstr "Fraktjakt klar"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/wizards/fraktjakt_register_wizard.py:0
+msgid "Credentials saved on %s"
+msgstr "Credentials sparade på %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/wizards/fraktjakt_register_wizard.py:0
+msgid "Could not reach Fraktjakt: %s"
+msgstr "Kunde inte nå Fraktjakt: %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/wizards/fraktjakt_register_wizard.py:0
+msgid "Invalid XML from Fraktjakt: %s"
+msgstr "Felaktig XML från Fraktjakt: %s"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/wizards/fraktjakt_register_wizard.py:0
+msgid "Registration failed"
+msgstr "Registrering misslyckades"
+
+#. module: delivery_fraktjakt
+#. python-format
+#: code:addons/delivery_fraktjakt/wizards/fraktjakt_register_wizard.py:0
+msgid "Fraktjakt returned no credentials"
+msgstr "Fraktjakt returnerade inga credentials"

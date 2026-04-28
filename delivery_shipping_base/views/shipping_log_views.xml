@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_shipping_api_log_tree" model="ir.ui.view">
+        <field name="name">shipping.api.log.tree</field>
+        <field name="model">shipping.api.log</field>
+        <field name="arch" type="xml">
+            <list string="Shipping integration log"
+                  decoration-danger="error"
+                  decoration-warning="http_status &gt;= 400 and http_status &lt; 500"
+                  default_order="create_date desc">
+                <field name="create_date"/>
+                <field name="integration"/>
+                <field name="endpoint"/>
+                <field name="http_status"/>
+                <field name="picking_id"/>
+                <field name="error" optional="show"/>
+                <field name="create_uid" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_shipping_api_log_form" model="ir.ui.view">
+        <field name="name">shipping.api.log.form</field>
+        <field name="model">shipping.api.log</field>
+        <field name="arch" type="xml">
+            <form string="Shipping integration log">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="create_date" readonly="1"/>
+                            <field name="integration"/>
+                            <field name="endpoint"/>
+                        </group>
+                        <group>
+                            <field name="http_status"/>
+                            <field name="picking_id"/>
+                            <field name="create_uid" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="error"/>
+                    <notebook>
+                        <page string="Request">
+                            <field name="request_body" widget="ace"
+                                   options="{'mode': 'json'}"/>
+                        </page>
+                        <page string="Response">
+                            <field name="response_body" widget="ace"
+                                   options="{'mode': 'json'}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_shipping_api_log_search" model="ir.ui.view">
+        <field name="name">shipping.api.log.search</field>
+        <field name="model">shipping.api.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="endpoint"/>
+                <field name="integration"/>
+                <field name="picking_id"/>
+                <filter string="Errors only" name="error_only"
+                        domain="[('error', '!=', False)]"/>
+                <filter string="HTTP 4xx" name="client_errors"
+                        domain="[('http_status', '&gt;=', 400),
+                                 ('http_status', '&lt;', 500)]"/>
+                <filter string="HTTP 5xx" name="server_errors"
+                        domain="[('http_status', '&gt;=', 500)]"/>
+                <separator/>
+                <filter string="Last hour" name="recent"
+                        domain="[('create_date', '&gt;=',
+                                  (datetime.datetime.now() -
+                                   datetime.timedelta(hours=1)).strftime(
+                                  '%Y-%m-%d %H:%M:%S'))]"/>
+                <group expand="0" string="Group by">
+                    <filter string="Integration" name="group_integration"
+                            context="{'group_by': 'integration'}"/>
+                    <filter string="Endpoint" name="group_endpoint"
+                            context="{'group_by': 'endpoint'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_shipping_api_log" model="ir.actions.act_window">
+        <field name="name">Shipping API Log</field>
+        <field name="res_model">shipping.api.log</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

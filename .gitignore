@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Odoo
+*.pot.bak
+*.po~
+*.mo
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local secrets (never commit credentials)
+.env
+.env.local
+secrets.json
+*.key
+*.pem
+
+# Internal docs not meant for public repo
+CLAUDE.md
+Fraktjakt_API_en.pdf

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_delivery_carrier_form_sendify" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.sendify</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Sendify" invisible="delivery_type != 'sendify'">
+                    <group>
+                        <field name="sendify_carrier_filter"/>
+                        <field name="sendify_service_filter"/>
+                    </group>
+                    <button name="action_sendify_test_credentials"
+                            type="object" string="Test connection"
+                            class="btn-primary"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

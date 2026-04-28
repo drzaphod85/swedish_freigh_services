@@ -1,0 +1,75 @@
+# Swedish translation for delivery_fraktjakt_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 00:00+0000\n"
+"PO-Revision-Date: 2026-04-28 00:00+0000\n"
+"Last-Translator: Familjen Larsson\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_my_orders_fraktjakt
+msgid "Shipments"
+msgstr "Försändelser"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_my_orders_fraktjakt
+msgid "Track"
+msgstr "Spåra"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_my_orders_fraktjakt
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_picking_detail
+msgid "Details"
+msgstr "Detaljer"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_picking_detail
+msgid "Shipment"
+msgstr "Försändelse"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_picking_detail
+msgid "Tracking number:"
+msgstr "Spårningsnummer:"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_picking_detail
+msgid "Open full tracking"
+msgstr "Öppna fullständig spårning"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_picking_detail
+msgid "Events"
+msgstr "Händelser"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_picking_detail
+msgid "Addressed to"
+msgstr "Adresserat till"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.portal_picking_detail
+msgid "Refresh tracking"
+msgstr "Uppdatera spårning"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.checkout_agent_picker
+msgid "Choose a pickup location"
+msgstr "Välj utlämningsombud"
+
+#. module: delivery_fraktjakt_portal
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_portal.checkout_agent_picker
+msgid ""
+"Pick up your parcel at the closest service point — we show the nearest "
+"ones based on your shipping address."
+msgstr ""
+"Hämta ditt paket hos närmsta ombud — vi visar de närmaste baserat på din "
+"leveransadress."

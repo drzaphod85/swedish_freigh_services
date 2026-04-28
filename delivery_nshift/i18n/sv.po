@@ -1,0 +1,207 @@
+# Swedish translation for delivery_nshift
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 00:00+0000\n"
+"PO-Revision-Date: 2026-04-28 00:00+0000\n"
+"Last-Translator: Familjen Larsson\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_company__nshift_developer_id
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_config_settings__nshift_developer_id
+msgid "nShift Developer ID"
+msgstr "nShift Developer ID"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_company__nshift_developer_key
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_config_settings__nshift_developer_key
+msgid "nShift Developer Key"
+msgstr "nShift Developer Key"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,help:delivery_nshift.field_res_company__nshift_developer_key
+msgid "Treat as a password."
+msgstr "Behandlas som lösenord."
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_company__nshift_customer_no
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_config_settings__nshift_customer_no
+msgid "nShift Customer Number"
+msgstr "nShift kundnummer"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,help:delivery_nshift.field_res_company__nshift_customer_no
+msgid "Found in nShift Online under company settings."
+msgstr "Hittar du i nShift Online under företagsinställningar."
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_company__nshift_mode
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_config_settings__nshift_mode
+msgid "nShift Mode"
+msgstr "nShift-läge"
+
+#. module: delivery_nshift
+#: model:ir.model.fields.selection,name:delivery_nshift.selection__res_company__nshift_mode__test
+msgid "Test"
+msgstr "Test"
+
+#. module: delivery_nshift
+#: model:ir.model.fields.selection,name:delivery_nshift.selection__res_company__nshift_mode__prod
+msgid "Production"
+msgstr "Produktion"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_company__nshift_default_service
+#: model:ir.model.fields,field_description:delivery_nshift.field_res_config_settings__nshift_default_service
+msgid "Default Service"
+msgstr "Standardtjänst"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,help:delivery_nshift.field_res_company__nshift_default_service
+msgid ""
+"e.g. PNL01 (PostNord MyPack Collect). Leave blank to let nShift autoselect."
+msgstr ""
+"t.ex. PNL01 (PostNord MyPack Collect). Lämna tomt för att låta nShift "
+"autoselect välja."
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_delivery_carrier__nshift_service_id
+msgid "Service ID"
+msgstr "Service ID"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,help:delivery_nshift.field_delivery_carrier__nshift_service_id
+msgid ""
+"e.g. PNL01 for PostNord MyPack Collect. Leave blank to let nShift pick the "
+"cheapest/fastest."
+msgstr ""
+"t.ex. PNL01 för PostNord MyPack Collect. Lämna tomt för att låta nShift "
+"välja billigast/snabbast."
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_delivery_carrier__nshift_payer
+msgid "Payer"
+msgstr "Betalare"
+
+#. module: delivery_nshift
+#: model:ir.model.fields.selection,name:delivery_nshift.selection__delivery_carrier__nshift_payer__sender
+msgid "Sender"
+msgstr "Avsändare"
+
+#. module: delivery_nshift
+#: model:ir.model.fields.selection,name:delivery_nshift.selection__delivery_carrier__nshift_payer__receiver
+msgid "Receiver"
+msgstr "Mottagare"
+
+#. module: delivery_nshift
+#: model:ir.model.fields.selection,name:delivery_nshift.selection__delivery_carrier__nshift_payer__third_party
+msgid "Third party"
+msgstr "Tredje part"
+
+#. module: delivery_nshift
+#: model:ir.model.fields.selection,name:delivery_nshift.selection__delivery_carrier__nshift_pdf_size__a6
+msgid "A6 — thermal label"
+msgstr "A6 — termoetikett"
+
+#. module: delivery_nshift
+#: model:ir.model.fields.selection,name:delivery_nshift.selection__delivery_carrier__nshift_pdf_size__a4
+msgid "A4 — plain paper"
+msgstr "A4 — vanligt papper"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_stock_picking__nshift_shipment_id
+msgid "nShift shipment ID"
+msgstr "nShift shipment-ID"
+
+#. module: delivery_nshift
+#: model:ir.model.fields,field_description:delivery_nshift.field_stock_picking__nshift_tracking_number
+msgid "nShift tracking number"
+msgstr "nShift spårningsnummer"
+
+#. module: delivery_nshift
+#: model_terms:ir.ui.view,arch_db:delivery_nshift.view_delivery_carrier_form_nshift
+msgid "Test connection"
+msgstr "Testa anslutning"
+
+#. module: delivery_nshift
+#: model:product.product,name:delivery_nshift.product_product_nshift
+msgid "Shipping via nShift"
+msgstr "Frakt via nShift"
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid ""
+"nShift credentials missing. Set Developer ID and Key under Settings > "
+"Inventory > nShift."
+msgstr ""
+"nShift-credentials saknas. Sätt Developer ID och Key under Inställningar > "
+"Lager > nShift."
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "No shippable products on this order."
+msgstr "Inga fraktbara produkter på ordern."
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "nShift returned no shipping options."
+msgstr "nShift returnerade inga fraktalternativ."
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "No parcels to ship for %s."
+msgstr "Inga kollin att skicka för %s."
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "nShift returned no shipment id: %s"
+msgstr "nShift returnerade inget shipment-id: %s"
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "Could not fetch nShift label: %s"
+msgstr "Kunde inte hämta nShift-fraktsedel: %s"
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "nShift booking created: shipment %s, tracking %s"
+msgstr "nShift-bokning skapad: shipment %s, spårning %s"
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "nShift booking cancelled."
+msgstr "nShift-bokning avbokad."
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "nShift OK"
+msgstr "nShift OK"
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/delivery_carrier.py:0
+msgid "Connected — %d carriers available"
+msgstr "Anslutet — %d transportörer tillgängliga"
+
+#. module: delivery_nshift
+#. python-format
+#: code:addons/delivery_nshift/models/nshift_request.py:0
+msgid "Could not fetch label from nShift: %s"
+msgstr "Kunde inte hämta fraktsedel från nShift: %s"

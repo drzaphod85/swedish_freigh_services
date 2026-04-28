@@ -1,0 +1,136 @@
+# Swedish translation for delivery_fraktjakt_returns
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 00:00+0000\n"
+"PO-Revision-Date: 2026-04-28 00:00+0000\n"
+"Last-Translator: Familjen Larsson\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_fraktjakt_returns
+#: model:ir.model,name:delivery_fraktjakt_returns.model_fraktjakt_return_wizard
+msgid "Create return via Fraktjakt"
+msgstr "Skapa retur via Fraktjakt"
+
+#. module: delivery_fraktjakt_returns
+#: model:ir.model.fields,field_description:delivery_fraktjakt_returns.field_fraktjakt_return_wizard__reason
+msgid "Reason"
+msgstr "Anledning"
+
+#. module: delivery_fraktjakt_returns
+#: model:ir.model.fields.selection,name:delivery_fraktjakt_returns.selection__fraktjakt_return_wizard__reason__return
+msgid "Return"
+msgstr "Retur"
+
+#. module: delivery_fraktjakt_returns
+#: model:ir.model.fields.selection,name:delivery_fraktjakt_returns.selection__fraktjakt_return_wizard__reason__repair
+msgid "Repair"
+msgstr "Reparation"
+
+#. module: delivery_fraktjakt_returns
+#: model:ir.model.fields.selection,name:delivery_fraktjakt_returns.selection__fraktjakt_return_wizard__reason__sample
+msgid "Sample"
+msgstr "Prov"
+
+#. module: delivery_fraktjakt_returns
+#: model:ir.model.fields,field_description:delivery_fraktjakt_returns.field_fraktjakt_return_wizard__note
+msgid "Message to customer"
+msgstr "Meddelande till kund"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.view_fraktjakt_return_wizard
+msgid "Create return"
+msgstr "Skapa retur"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.view_fraktjakt_return_wizard
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.portal_picking_return_form
+msgid "Cancel"
+msgstr "Avbryt"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.portal_picking_return_form
+msgid "Request a return"
+msgstr "Begär en retur"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.portal_picking_return_form
+msgid "Please tell us why you'd like to return"
+msgstr "Berätta gärna varför du vill returnera"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.return_success
+msgid "Return created"
+msgstr "Retur skapad"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.return_success
+msgid ""
+"We've created a return for %s. The return label will be emailed to you "
+"shortly."
+msgstr ""
+"Vi har skapat en retur för %s. Fraktsedel skickas till din e-post inom "
+"kort."
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.return_success
+msgid "Back to my account"
+msgstr "Tillbaka till mina sidor"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.return_failure
+msgid "Something went wrong"
+msgstr "Något gick fel"
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.return_failure
+msgid ""
+"We couldn't create the return automatically. Please contact customer "
+"service and we'll help you."
+msgstr ""
+"Vi kunde inte skapa returen automatiskt. Kontakta kundtjänst så hjälper "
+"vi dig."
+
+#. module: delivery_fraktjakt_returns
+#: model_terms:ir.ui.view,arch_db:delivery_fraktjakt_returns.return_failure
+msgid "Back"
+msgstr "Tillbaka"
+
+#. module: delivery_fraktjakt_returns
+#. python-format
+#: code:addons/delivery_fraktjakt_returns/wizards/fraktjakt_return_wizard.py:0
+msgid ""
+"No return link available for %s. This may be because the shipment is not "
+"yet paid, or because the Fraktjakt booking has no return_link."
+msgstr ""
+"Ingen retur-länk finns för %s. Det kan bero på att frakten inte är betald "
+"än, eller att fraktjakt-bokningen saknar return_link."
+
+#. module: delivery_fraktjakt_returns
+#. python-format
+#: code:addons/delivery_fraktjakt_returns/wizards/fraktjakt_return_wizard.py:0
+msgid "Fraktjakt return failed: %s"
+msgstr "Fraktjakt-retur misslyckades: %s"
+
+#. module: delivery_fraktjakt_returns
+#. python-format
+#: code:addons/delivery_fraktjakt_returns/wizards/fraktjakt_return_wizard.py:0
+msgid ""
+"Return created at Fraktjakt. Complete payment at <a href='%s' "
+"target='_blank'>Fraktjakt's portal</a>."
+msgstr ""
+"Retur skapad hos Fraktjakt. Slutför betalning på <a href='%s' "
+"target='_blank'>Fraktjakts portal</a>."
+
+#. module: delivery_fraktjakt_returns
+#. python-format
+#: code:addons/delivery_fraktjakt_returns/wizards/fraktjakt_return_wizard.py:0
+msgid "Logged on %s. Complete at Fraktjakt."
+msgstr "Loggad i %s. Slutför hos Fraktjakt."

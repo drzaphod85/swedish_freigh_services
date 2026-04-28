@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_product_template_form_shipping" model="ir.ui.view">
+        <field name="name">product.template.form.shipping</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_information']" position="after">
+                <page string="Shipping &amp; Customs" name="shipping_customs">
+                    <group>
+                        <group string="Dimensions (cm)">
+                            <field name="product_length"/>
+                            <field name="product_width"/>
+                            <field name="product_height"/>
+                        </group>
+                        <group string="Customs">
+                            <field name="shipping_taric"/>
+                            <field name="shipping_country_of_origin_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Special Handling">
+                            <field name="shipping_in_own_parcel"/>
+                            <field name="shipping_dangerous_goods"/>
+                            <field name="shipping_dangerous_goods_un_nr"
+                                   invisible="not shipping_dangerous_goods"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_fraktjakt_root"
+              name="Fraktjakt"
+              parent="delivery_shipping_base.menu_shipping_root"
+              sequence="10"/>
+
+    <record id="action_fraktjakt_register" model="ir.actions.act_window">
+        <field name="name">Register Fraktjakt account</field>
+        <field name="res_model">fraktjakt.register.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_fraktjakt_register"
+              name="Register new account"
+              parent="menu_fraktjakt_root"
+              action="action_fraktjakt_register"
+              sequence="10"/>
+</odoo>

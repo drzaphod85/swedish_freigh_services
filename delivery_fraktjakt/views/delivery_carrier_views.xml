@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_delivery_carrier_form_fraktjakt" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.fraktjakt</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Fraktjakt"
+                      invisible="delivery_type != 'fraktjakt'">
+                    <group>
+                        <group string="Service selection">
+                            <field name="fraktjakt_shipping_product_id"/>
+                            <field name="fraktjakt_price_sort"/>
+                            <field name="fraktjakt_no_agents"/>
+                            <field name="fraktjakt_use_callback"/>
+                        </group>
+                        <group string="Filters">
+                            <field name="fraktjakt_express"/>
+                            <field name="fraktjakt_green"/>
+                            <field name="fraktjakt_quality"/>
+                            <field name="fraktjakt_time_guarantee"/>
+                            <field name="fraktjakt_pickup"/>
+                            <field name="fraktjakt_dropoff"/>
+                            <field name="fraktjakt_cold"/>
+                            <field name="fraktjakt_frozen"/>
+                            <field name="fraktjakt_insure_default"/>
+                        </group>
+                    </group>
+                    <div class="alert alert-info" role="alert">
+                        Tip: leave <em>shipping_product_id</em> blank to let Fraktjakt show all relevant services.
+                        Set it specifically if you always want to use the same service (e.g. PostNord MyPack Collect = 30).
+                    </div>
+                    <button name="action_fraktjakt_test_credentials"
+                            type="object" string="Test connection"
+                            class="btn-primary"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

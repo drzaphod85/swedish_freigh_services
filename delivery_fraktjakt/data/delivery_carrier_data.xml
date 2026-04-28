@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <!-- Default carrier-product used as the "delivery" line on SOs -->
+    <record id="product_product_fraktjakt" model="product.product">
+        <field name="name">Shipping via Fraktjakt</field>
+        <field name="type">service</field>
+        <field name="categ_id" ref="product.cat_expense"/>
+        <field name="default_code">SHIP-FRAKTJAKT</field>
+        <field name="invoice_policy">order</field>
+        <field name="list_price">0.0</field>
+        <field name="purchase_ok" eval="False"/>
+        <field name="sale_ok" eval="False"/>
+    </record>
+
+    <!-- Template for a Fraktjakt carrier (admin activates and fills credentials) -->
+    <record id="delivery_carrier_fraktjakt_default" model="delivery.carrier">
+        <field name="name">Fraktjakt</field>
+        <field name="delivery_type">fraktjakt</field>
+        <field name="product_id" ref="product_product_fraktjakt"/>
+        <field name="fraktjakt_price_sort">1</field>
+        <field name="fraktjakt_use_callback" eval="True"/>
+        <field name="active" eval="False"/>
+    </record>
+</odoo>

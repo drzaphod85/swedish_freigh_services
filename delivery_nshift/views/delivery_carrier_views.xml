@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_delivery_carrier_form_nshift" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.nshift</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="nShift" invisible="delivery_type != 'nshift'">
+                    <group>
+                        <group>
+                            <field name="nshift_service_id"/>
+                            <field name="nshift_payer"/>
+                            <field name="nshift_pdf_size"/>
+                        </group>
+                    </group>
+                    <div class="alert alert-info">
+                        Leave <em>Service ID</em> blank to let nShift pick the cheapest service.
+                        Common IDs: PNL01 (PostNord MyPack), DHLS01 (DHL Service Point),
+                        BPL01 (Bring PickUpParcel).
+                    </div>
+                    <button name="action_nshift_test_credentials"
+                            type="object" string="Test connection"
+                            class="btn-primary"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

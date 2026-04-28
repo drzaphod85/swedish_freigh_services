@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_picking_form_sendify" model="ir.ui.view">
+        <field name="name">stock.picking.form.sendify</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Sendify"
+                      invisible="not sendify_booking_id">
+                    <group>
+                        <field name="sendify_booking_id"/>
+                        <field name="sendify_tracking_number"/>
+                        <field name="sendify_tracking_url" widget="url"/>
+                        <field name="sendify_label_url" widget="url"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,159 @@
+# Swedish translation for delivery_sendify
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 00:00+0000\n"
+"PO-Revision-Date: 2026-04-28 00:00+0000\n"
+"Last-Translator: Familjen Larsson\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_res_company__sendify_api_key
+#: model:ir.model.fields,field_description:delivery_sendify.field_res_config_settings__sendify_api_key
+msgid "Sendify API Key"
+msgstr "Sendify API-nyckel"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,help:delivery_sendify.field_res_company__sendify_api_key
+msgid ""
+"Bearer token. Retrieved from the Sendify portal under API settings."
+msgstr ""
+"Bearer-token. Hämtas från Sendify-portalen under API-inställningar."
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_res_company__sendify_test_mode
+#: model:ir.model.fields,field_description:delivery_sendify.field_res_config_settings__sendify_test_mode
+msgid "Sendify Test Mode"
+msgstr "Sendify testläge"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,help:delivery_sendify.field_res_company__sendify_test_mode
+msgid ""
+"When enabled, calls are logged extra and no real bookings are created. "
+"Test mode must also be enabled at Sendify."
+msgstr ""
+"När påslaget loggas anrop extra och inga riktiga bokningar görs. "
+"Test-läget ska också aktiveras hos Sendify."
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_delivery_carrier__sendify_carrier_filter
+msgid "Carrier Filter"
+msgstr "Filtrera transportör"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,help:delivery_sendify.field_delivery_carrier__sendify_carrier_filter
+msgid ""
+"e.g. 'postnord' or 'dhl' to limit responses in the quote API."
+msgstr ""
+"t.ex. 'postnord' eller 'dhl' för att begränsa svar i quote-API:et."
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_delivery_carrier__sendify_service_filter
+msgid "Service Filter"
+msgstr "Service-filter"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,help:delivery_sendify.field_delivery_carrier__sendify_service_filter
+msgid ""
+"e.g. 'mypack_collect'. Leave blank for cheapest option."
+msgstr ""
+"t.ex. 'mypack_collect'. Lämna tomt för billigaste val."
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_stock_picking__sendify_booking_id
+msgid "Sendify booking ID"
+msgstr "Sendify booking-ID"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_stock_picking__sendify_tracking_number
+msgid "Sendify tracking number"
+msgstr "Sendify spårningsnummer"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_stock_picking__sendify_tracking_url
+msgid "Sendify tracking link"
+msgstr "Sendify spårningslänk"
+
+#. module: delivery_sendify
+#: model:ir.model.fields,field_description:delivery_sendify.field_stock_picking__sendify_label_url
+msgid "Sendify label URL"
+msgstr "Sendify fraktsedel-URL"
+
+#. module: delivery_sendify
+#: model_terms:ir.ui.view,arch_db:delivery_sendify.view_delivery_carrier_form_sendify
+msgid "Test connection"
+msgstr "Testa anslutning"
+
+#. module: delivery_sendify
+#: model:product.product,name:delivery_sendify.product_product_sendify
+msgid "Shipping via Sendify"
+msgstr "Frakt via Sendify"
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid ""
+"Sendify API key missing. Set it under Settings > Inventory > Sendify."
+msgstr ""
+"Sendify API-nyckel saknas. Sätt den under Inställningar > Lager > Sendify."
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "No shippable products on this order."
+msgstr "Inga fraktbara produkter på ordern."
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "Sendify found no shipping options."
+msgstr "Sendify hittade inga fraktalternativ."
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "No parcels to ship for %s."
+msgstr "Inga kollin att skicka för %s."
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "Could not fetch Sendify label: %s"
+msgstr "Kunde inte hämta Sendify-fraktsedel: %s"
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "Sendify booking created: %s, tracking %s"
+msgstr "Sendify-bokning skapad: %s, spårning %s"
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "Sendify booking cancelled."
+msgstr "Sendify-bokning avbokad."
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "Sendify OK"
+msgstr "Sendify OK"
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/delivery_carrier.py:0
+msgid "Connected — %d quotes returned"
+msgstr "Anslutet — %d quotes returnerade"
+
+#. module: delivery_sendify
+#. python-format
+#: code:addons/delivery_sendify/models/sendify_request.py:0
+msgid "Could not fetch Sendify label: %s"
+msgstr "Kunde inte hämta Sendify-fraktsedel: %s"

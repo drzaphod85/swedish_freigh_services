@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_sendify_root"
+              name="Sendify"
+              parent="delivery_shipping_base.menu_shipping_root"
+              sequence="30"/>
+</odoo>

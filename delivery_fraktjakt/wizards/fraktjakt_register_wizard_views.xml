@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_fraktjakt_register_wizard" model="ir.ui.view">
+        <field name="name">fraktjakt.register.wizard.form</field>
+        <field name="model">fraktjakt.register.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Fraktjakt account">
+                <group>
+                    <field name="mode" widget="radio"/>
+                    <field name="company_id"
+                           groups="base.group_multi_company"/>
+                </group>
+                <group string="Import credentials"
+                       invisible="mode != 'import'">
+                    <field name="consignor_id"/>
+                    <field name="consignor_key" password="True"/>
+                </group>
+                <group string="Register new account"
+                       invisible="mode != 'register'">
+                    <group>
+                        <field name="user_email"/>
+                        <field name="user_password" password="True"/>
+                        <field name="phone"/>
+                    </group>
+                    <group>
+                        <field name="company_name"/>
+                        <field name="org_no"/>
+                        <field name="country_code"/>
+                    </group>
+                    <group>
+                        <field name="street"/>
+                        <field name="zip"/>
+                        <field name="city"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object"
+                            string="Save" class="btn-primary"/>
+                    <button special="cancel" string="Cancel"
+                            class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_picking_form_fraktjakt" model="ir.ui.view">
+        <field name="name">stock.picking.form.fraktjakt</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Fraktjakt"
+                      invisible="not fraktjakt_shipment_id">
+                    <group>
+                        <group string="At Fraktjakt">
+                            <field name="fraktjakt_state"/>
+                            <field name="fraktjakt_shipment_id"/>
+                            <field name="fraktjakt_tracking_number"/>
+                            <field name="fraktjakt_amount"
+                                   widget="monetary"
+                                   options="{'currency_field': 'fraktjakt_currency_id'}"/>
+                            <field name="fraktjakt_currency_id" invisible="1"/>
+                            <field name="fraktjakt_agent_id"/>
+                        </group>
+                        <group string="Links">
+                            <field name="fraktjakt_access_link" widget="url"/>
+                            <field name="fraktjakt_tracking_link" widget="url"/>
+                            <field name="fraktjakt_return_link" widget="url"/>
+                        </group>
+                    </group>
+                    <group string="Last event">
+                        <field name="fraktjakt_last_event"/>
+                        <field name="fraktjakt_last_event_at"/>
+                    </group>
+                    <div>
+                        <button name="action_fraktjakt_refresh_tracking"
+                                type="object" string="Refresh tracking"
+                                class="btn-secondary"/>
+                        <button name="action_fraktjakt_open_dashboard"
+                                type="object" string="Open in Fraktjakt"
+                                class="btn-primary"/>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- List — show Fraktjakt status -->
+    <record id="view_picking_tree_fraktjakt" model="ir.ui.view">
+        <field name="name">stock.picking.tree.fraktjakt</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="fraktjakt_state" optional="hide"/>
+                <field name="fraktjakt_tracking_number" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Filters -->
+    <record id="view_picking_search_fraktjakt" model="ir.ui.view">
+        <field name="name">stock.picking.search.fraktjakt</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <separator/>
+                <filter string="Booked at Fraktjakt"
+                        name="fraktjakt_booked"
+                        domain="[('fraktjakt_shipment_id', '!=', False)]"/>
+                <filter string="In transit"
+                        name="fraktjakt_in_transit"
+                        domain="[('fraktjakt_state', '=', 'in_transit')]"/>
+                <filter string="At service point"
+                        name="fraktjakt_at_agent"
+                        domain="[('fraktjakt_state', '=', 'at_agent')]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
